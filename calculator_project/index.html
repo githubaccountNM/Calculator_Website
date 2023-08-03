@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- english -->
+<head>
+     <!-- necessary to project -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Calculator</title>
+    <link href = "style.css" rel = "stylesheet"> <!-- referring to my other file style.css -->
+    <script src = "script.js" defer> </script> <!--referring to script.js  -->
+
+</head>
+
+<body>
+    <!-- the border that contains all elements of calculator -->
+    <div class = "calc-container">
+ 
+            <!-- to seperate numbers that will appear on screen -->
+            <div id = "output">
+                <!-- top part, shows what they previously wrote -->
+                <div id = "previous-output"></div>
+                <!-- bottom part, shows current output -->
+                <div id = "current-output"></div> 
+            </div>
+
+
+        <!-- bottom of calculator (for buttons)
+        class: bold-text is for bolded button, button for number buttons, button-operator: for operations
+        purpose of buttons with id: clear: delete all, delete: delete last number, result: gets answer to numbers -->
+        <div class = "calc-bottom">
+            <button id = "clear", class = "bold-text">AC</button>
+            <button id = "delete", class = "button">DEL</button>          
+            <button class = "button">1</button>
+            <button class = "button-operator">/</button>
+            <button class = "button">2</button>
+            <button class = "button">3</button>
+            <button class = "button">4</button>
+            <button class = "button-operator">*</button>
+            <button class = "button">5</button>
+            <button class = "button">6</button>
+            <button class = "button">7</button>
+            <button class = "button-operator">+</button>
+            <button class = "button">8</button>
+            <button class = "button">9</button>
+            <button class = "button">.</button>
+            <button class = "button-operator">-</button>
+            <button class = "button">0</button>
+            <button id = "result", class = "bold-text">=</button>
+        </div>
+    </div>
+
+</body>
+</html>

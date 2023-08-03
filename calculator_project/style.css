@@ -1,0 +1,96 @@
+*{
+    box-sizing: content-box; /*content box type website*/
+    font: Courier normal;
+    /*fill entire screen, resets margins/padding to default,background color*/
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:rgb(234, 192, 204);
+    height: 100vh; /* Set the maximum height */
+    display: flex; /*centers calculator-container, and calc-bottom */
+    justify-content: center; /*puts rest of containers/items in middle*/
+    align-items: center;
+}
+  
+.calc-container{
+    display: grid; /*sets in rows and columns (used to set up output on top)*/
+    max-height: 600px; /*makes sure it is not to long(height) when maximized screen*/
+    min-width: 600px; /*use min-width to stop resizing when minimizing*/
+    max-width: 650px; /*makes sure it is not too wide when maximized*/
+    background-color: cornflowerblue;
+    border: 10px double black;
+}
+
+
+#output{
+    margin: 10px; /*sets away from calc-container*/
+    min-height: 200px; /*necessary to set output size (min)*/
+    max-height: 500px;
+    max-width: 600px; 
+    border: 5px outset whitesmoke; 
+    text-align: right;
+    overflow: hidden; /*hides overflowed text*/
+
+} 
+
+#previous-output{
+    color: black;
+    background-color: lightgray;
+    min-height: 30%; /*shares spaces with current-output*/
+    border: 2px solid black;
+    font: 30px normal black;
+    /*following is used to move number to left without scrolling*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+#current-output{
+    
+    color: black;
+    background-color: white;
+    min-height: 67%; /*shares space with previous-output, also smaller than 70 to show border*/
+    border: 2px solid black;
+    font: 50px normal black;
+    /*following is used to move number to left without scrolling*/
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.calc-bottom{
+    /*to put into grid, 4 columns, 5 rows*/
+    display: grid;
+
+    grid-template-columns: repeat(4, auto); 
+    grid-template-rows: repeat(5, 50px);  
+
+    grid-gap: 10px;/* gap between the buttons*/
+    font: 60px normal;
+    padding: 10px; /*gap between buttons and calc-bottom*/
+    margin: 10px; /*gap between calc-bottom and calc-container*/
+    background-color: lightskyblue;
+    border: 10px outset white;
+}
+
+/*for buttons, mostly just button color, cursor is hand click cursor, font-weight makes text bold*/
+.bold-text{
+    grid-column: span 2; /*button takes double space*/
+    background-color: black;
+    color: white;
+    cursor: pointer; 
+    font-weight: 900;
+}
+
+.button{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.button-operator{
+    color: white;
+    background-color: midnightblue;
+    cursor: pointer; 
+}
